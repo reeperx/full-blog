@@ -19,6 +19,7 @@
     "imagekit": "^5.2.0",
     "micro": "^10.0.1",
     "mongoose": "^8.7.3",
+    "nodemailer": "^6.9.16",
     "svix": "^1.37.0"
   }
 }

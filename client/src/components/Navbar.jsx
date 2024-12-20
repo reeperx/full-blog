@@ -9,9 +9,9 @@ const Navbar = () => {
   return (
     <div className="w-full h-16 md:h-20 flex items-center justify-between">
       {/* LOGO */}
-      <Link to="/" className="flex items-center gap-4 text-2xl font-bold">
+      <Link to="/" className="flex items-center gap-4 font-bold">
         <Image src="logo.png" alt="Lama Logo" w={32} h={32} />
-        <span>lamalog</span>
+        <h1 className="italic uppercase text-2xl">Justice <span className="text-[#B58C13]">Unlocked</span></h1>
       </Link>
       {/* MOBILE MENU */}
       <div className="md:hidden">
@@ -48,10 +48,9 @@ const Navbar = () => {
         >
           <Link to="/" onClick={()=>setOpen(false)}>Home</Link>
           <Link to="/posts?sort=trending" onClick={()=>setOpen(false)}>Trending</Link>
-          <Link to="/posts?sort=popular" onClick={()=>setOpen(false)}>Most Popular</Link>
           <Link to="/" onClick={()=>setOpen(false)}>About</Link>
           <Link to="/login" onClick={()=>setOpen(false)}>
-            <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white">
+            <button className="py-2 px-4 rounded-3xl bg-[#B58C13] text-white">
               Login 👋
             </button>
           </Link>
@@ -60,12 +59,11 @@ const Navbar = () => {
       {/* DESKTOP MENU */}
       <div className="hidden md:flex items-center gap-8 xl:gap-12 font-medium">
         <Link to="/">Home</Link>
-        <Link to="/posts?sort=trending">Trending</Link>
-        <Link to="/posts?sort=popular">Most Popular</Link>
-        <Link to="/">About</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
         <SignedOut>
           <Link to="/login">
-            <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white">
+            <button className="py-2 px-4 rounded-3xl bg-[#B58C13] text-white">
               Login 👋
             </button>
           </Link>

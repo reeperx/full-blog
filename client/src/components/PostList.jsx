@@ -3,6 +3,7 @@ import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useSearchParams } from "react-router-dom";
+import Loader from "../components/Loader";
 
 const fetchPosts = async (pageParam, searchParams) => {
   const searchParamsObj = Object.fromEntries([...searchParams]);
@@ -35,7 +36,7 @@ const PostList = () => {
   });
 
   // if (status === "loading") return "Loading...";
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
   
 
   // if (status === "error") return "Something went wrong!";
